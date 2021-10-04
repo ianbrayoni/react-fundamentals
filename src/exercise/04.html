@@ -12,14 +12,12 @@
     // 🐨 use that function in place of the divs below with:
     // 💰 {message({children: 'Hello World'})} {message({children: 'Goodbye World'})}
 
-    const message = ({children}) => {
+    const Message = ({children}) => {
       return <div className="message">{children}</div>
     }
 
-    const helloElement = React.createElement(message, {children: 'Hello World'})
-    const goodbyeElement = React.createElement(message, {
-      children: 'Goodbye World',
-    })
+    const helloElement = <Message children={'Hello World'} />
+    const goodbyeElement = <Message children={'Goodbye World'} />
 
     const element = (
       <div className="container">
